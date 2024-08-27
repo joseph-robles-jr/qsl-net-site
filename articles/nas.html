@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | KI5TLZ's Corner</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="../images/joseph_logo.jpg" alt="Logo image">
+
+        <nav>
+            <a id="home" href="../index.html">Home</a>
+            <a id="articles" href="allstar.html">Allstar</a>
+            <a id="contact-us" href="nas.html">NAS</a>
+
+        </nav>
+    </header>
+
+    <section id="content">
+    <section class="article">
+        
+        <div id="nas">
+            <h2>Network Attatched Storage</h2>
+
+            <img src="../images/nas-outside.jpg" alt="The completed product">
+            <p>I have tons of computers and it is often difficult to keep track of what files are where and then you end up with tons of different versions of the same files and so much wasted space. I decided to Make a file server to simplify the distribution of my files.</p>
+
+           
+            <p>I had a Dell OptiPlex 9020 SFF kicking around that was just the right size for the space that I had available. I put 4 solid state drives into this machine. The first drive – a 245gb sata SSD – would become the boot drive for Rocky Linux 9. The remaining drives would be for file storage. I added 2 500gb crucial SSD’s and put them in a raid 1 array – esentialy they are identical copies of each other so that if one fails, the other will still have all the data. The final drive was a 128gb drive that I use to store files that I need fast access too but don’t necessarily want redundancy for.</p>
+
+            <p>For the processor, I went with an Intel Core i5 4570. I had this kicking around and it seemed to be a reasonable middle of the road choice for a box that would be mostly serving small files and not doing anything intense.</p>
+
+            <p>For ram, I added 20gb of 1600mhz ddr3 that I also had lying around. This was initially overkill, but since discovering docker and virtualization, it is a bit of a bottleneck on what I can do with the system.</p>
+
+            <img src="../images/nas-insides.jpg" alt="Insides of the NAS">
+
+        </div>
+
+    </section>
+    </section>
+    
+    <footer>
+        
+        <div id="contact_section">
+        <a class="site-plan" href="../site-plan-hrs.html">Site Plan</a>
+        <h3>Contact me</h3>
+        <p>Email: KI5TLZ.TX@gmail.com</p>
+        <p>My QRZ page:</p> <a href="http://https://www.qrz.com/db/ki5tlz">https://www.qrz.com/db/ki5tlz</a>
+        </div>
+    </footer>   
+
+
+</body>
+</html>
