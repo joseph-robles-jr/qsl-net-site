@@ -89,6 +89,12 @@ nav a{
     text-align: left;
 }
 
+#table-of-contents{
+    grid-column: 5;
+    color: white;
+    text-align: left;
+}
+
 #home:hover, #articles:hover, #contact-us:hover{
     color: black;
 
