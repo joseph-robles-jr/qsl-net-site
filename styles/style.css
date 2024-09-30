@@ -120,9 +120,9 @@ footer {
     }
 
     #logo {
-        grid-column: 1;
+       grid-column: 1;
         grid-row: 1;
-        width: 80px;
+        width: 100%;
     }
 
     @media (max-width: 700px) {
