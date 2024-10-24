@@ -6,7 +6,7 @@
     --secondary-color: #859db8;
     --text-color: #000000; /* Black text color for readability */
     --background-color: #C9D8E9;
-    --font-family: 'Roboto', sans-serif;
+    --font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     --header-bg-color: #FFFFFF; /* White header background */
     --header-height: 60px;
     --footer-height: auto; /* Dynamic height */
