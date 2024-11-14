@@ -25,8 +25,13 @@
                 <p>For more information about the construction of the node, please refer to my short <a href="allstar.html">AllstarLink Node Construction write-up</a>.</p>
             </div>
             <a href="https://stats.allstarlink.org/stats/60345">
-                <img src="https://stats.allstarlink.org/stats/60345/networkMap" alt="Node Bubble Chart">
+                <img id="allstarBubbleMap" src="https://stats.allstarlink.org/stats/60345/networkMap" alt="Node Bubble Chart">
             </a>
+
+            <script> //this updates the image on page refresh by preventing the browser from caching the image. 
+                const allstarBubbleimg = document.getElementById("allstarBubbleMap"); // select the allstar bubble chart
+                allstarBubbleimg.src += "?date=" + new Date();
+            </script>
             
             <div id="FIRST_SECTION">
                 <h3>Basic commands</h3>                <ul>
