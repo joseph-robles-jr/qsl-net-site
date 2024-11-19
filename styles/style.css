@@ -27,11 +27,13 @@ p {
     line-height: 1.5em;
 }
 
-img {
+/* Apply border radius to all images in the body */
+body img {
     display: block;
     margin: 0 auto 20px;
     margin-top: 20px;
     max-width: 100%;
+    border-radius: 8px;
 }
 
 h2, h3 {
@@ -111,6 +113,13 @@ nav a:hover {
     flex: 1; /* Ensures main content takes available space */
 }
 
+#allstarBubbleMap {
+    border: 0.1em solid #000000; /* Black border */
+    border-radius: 8px; /* Ensure the edges are rounded */
+    overflow: hidden; /* Ensure the content inside respects the rounded corners */
+}
+
+
 #content {
     flex: 1; /* Ensures content grows to take up available space */
     margin-bottom: 20px; /* Adds margin between content and footer */
@@ -176,5 +185,3 @@ footer p {
 #footer_links a:hover {
     background-color: #1e4a7a; /* Change background on hover */
 }
-
-
