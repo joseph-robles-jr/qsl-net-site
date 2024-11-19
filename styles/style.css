@@ -99,18 +99,34 @@ nav a:hover {
         width: 100%; /* Full width for nav links */
         text-align: center; /* Center text */
     }
+
+    .article {
+        padding: 20px;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: var(--text-color); /* Ensure article text is visible */
+        flex: 1; /* Ensures main content takes available space */
+    }
+    
 }
 
-/* Article Styles */
-.article {
-    padding: 20px;
-    max-width: 60%;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: var(--text-color); /* Ensure article text is visible */
-    flex: 1; /* Ensures main content takes available space */
+
+@media (min-width: 701px) 
+{
+    /* Article Styles */
+    .article {
+        padding: 20px;
+        max-width: 900px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: var(--text-color); /* Ensure article text is visible */
+        flex: 1; /* Ensures main content takes available space */
+    }
 }
 
 #allstarBubbleMap {
