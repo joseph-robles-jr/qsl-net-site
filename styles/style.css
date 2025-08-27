@@ -5,14 +5,11 @@
     --primary-color: #2660A4;
     --secondary-color: #859db8;
     --text-color: #000000;
-    /* Black text color for readability */
     --background-color: #C9D8E9;
     --font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    --header-bg-color: #FFFFFF;
-    /* White header background */
+    --header-bg-color: #FFFFFF; /* White header background */
     --header-height: 60px;
     --footer-height: auto;
-    /* Dynamic height */
 }
 
 /* General Styles */
@@ -21,18 +18,17 @@ body {
     margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    /* Ensure body text is visible */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Ensure body takes at least full height of the viewport */
+    
 }
 
 p {
     line-height: 1.5em;
 }
 
-/* Apply border radius to all images in the body */
+
 body img {
     display: block;
     margin: 0 auto 20px;
@@ -44,17 +40,14 @@ body img {
 h2,
 h3 {
     color: var(--primary-color);
-    /* Enhanced for titles */
 }
 
 /* Header Styles */
 header {
     height: var(--header-height);
     background-color: var(--header-bg-color);
-    /* White background */
     display: flex;
     align-items: center;
-    /* Vertically center logo and nav links */
     padding: 0 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -62,7 +55,6 @@ header {
 #logo {
     width: 150px;
     margin-right: 20px;
-    /* Add margin to separate logo from nav */
 }
 
 /* Navigation Styles */
@@ -71,9 +63,7 @@ nav {
     flex: 1;
     gap: 10px;
     justify-content: flex-end;
-    /* Align links to the right */
     align-items: center;
-    /* Vertically center nav links */
 }
 
 nav a {
@@ -91,38 +81,28 @@ nav a:hover {
 
 
 
-/* Responsive Header */
+/* Mobile Theme (Less than 700px width) */
 @media (max-width: 700px) {
     header {
         flex-direction: column;
-        /* Stack items vertically on mobile */
         align-items: center;
-        /* Center items horizontally */
         height: auto;
-        /* Allow header to adjust height */
     }
 
     #logo {
         margin-bottom: 10px;
-        /* Add spacing below logo */
         margin-right: 0;
-        /* Remove right margin */
     }
 
     nav {
         flex-direction: column;
-        /* Stack nav links vertically */
         width: 100%;
-        /* Full width on mobile */
         gap: 5px;
-        /* Reduce gap between links */
     }
 
     nav a {
         width: 100%;
-        /* Full width for nav links */
         text-align: center;
-        /* Center text */
     }
 
     .article {
@@ -133,9 +113,7 @@ nav a:hover {
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         color: var(--text-color);
-        /* Ensure article text is visible */
         flex: 1;
-        /* Ensures main content takes available space */
     }
 
     #RepeaterStats {
@@ -146,7 +124,6 @@ nav a:hover {
         text-decoration: none;
         margin-top: 10px;
         padding: 5px 10px;
-        /* color: var(--primary-color); */
         background-color: var(--secondary-color);
         color: var(--header-bg-color);
         border-radius: 4px;
@@ -154,17 +131,14 @@ nav a:hover {
     }
 
     #RepeaterStats:hover {
-        /* background-color: var(--secondary-color);
-    color: var(--header-bg-color); */
         color: var(--primary-color);
         background-color: var(--background-color);
     }
 }
 
-
+/* Desktop/Tablet theme  (Greater than 700 pixel width) */
 @media (min-width: 701px) {
 
-    /* Article Styles */
     .article {
         padding: 20px;
         max-width: 900px;
@@ -173,25 +147,20 @@ nav a:hover {
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         color: var(--text-color);
-        /* Ensure article text is visible */
         flex: 1;
-        /* Ensures main content takes available space */
     }
 
     #RepeaterStats {
         font-weight: normal;
         text-decoration: none;
         padding: 5px 10px;
-        /* color: var(--primary-color); */
         background-color: var(--secondary-color);
         color: var(--header-bg-color);
         border-radius: 4px;
         transition: background-color 0.3s ease;
     }
 
-    #RepeaterStats:hover {
-        /* background-color: var(--secondary-color);
-    color: var(--header-bg-color); */
+    #RepeaterStats:hover { 
         color: var(--primary-color);
         background-color: var(--background-color);
     }
@@ -199,109 +168,73 @@ nav a:hover {
 
 #allstarBubbleMap {
     border: 0.1em solid #000000;
-    /* Black border */
     border-radius: 8px;
-    /* Ensure the edges are rounded */
     overflow: hidden;
-    /* Ensure the content inside respects the rounded corners */
 }
 
 
 #content {
     flex: 1;
-    /* Ensures content grows to take up available space */
     margin-bottom: 20px;
-    /* Adds margin between content and footer */
 }
 
 /* Footer Styles */
 footer {
     background-color: #859db8;
-    /* Footer background color */
     padding: 20px;
-    /* Improved padding for better spacing */
     display: flex;
     flex-direction: row;
-    /* Arrange items in a row */
     align-items: center;
-    /* Center items vertically */
     justify-content: space-between;
-    /* Distribute space between items */
     border-top: 2px solid #2660A4;
-    /* Add a subtle border for separation */
     color: #FFFFFF;
-    /* Ensure text is readable on the background */
     flex-wrap: wrap;
-    /* Allow wrapping for smaller screens */
     margin-top: 0;
-    /* Remove excess margin */
 }
 
 #contact_section {
     max-width: 50%;
-    /* Limit width for better readability */
     padding: 10px;
-    /* Add padding for breathing space */
     margin-left: 20px;
-    /* Add margin to avoid sticking to the left */
 }
 
 footer a {
     color: #FFFFFF;
-    /* Ensure links are readable */
     text-decoration: none;
-    /* Remove underline from links */
     border-bottom: 1px solid transparent;
-    /* Add subtle hover effect */
     transition: color 0.3s, border-bottom 0.3s;
-    /* Smooth transition for hover effect */
 }
 
 footer a:hover {
     color: #2660A4;
-    /* Change link color on hover */
     border-bottom: 1px solid #2660A4;
-    /* Underline link on hover */
 }
 
 footer h3 {
     font-size: 1.5em;
-    /* Adjust header size */
     margin-bottom: 10px;
-    /* Add margin below header */
 }
 
 footer p {
     font-size: 1em;
-    /* Ensure paragraph text is readable */
     margin: 5px 0;
-    /* Add margin for better spacing */
 }
 
 #footer_links {
     display: flex;
     gap: 10px;
-    /* Add space between links */
     flex-wrap: wrap;
-    /* Allow links to wrap for smaller screens */
     justify-content: flex-end;
-    /* Align links to the right */
 }
 
 #footer_links a {
     padding: 5px 10px;
-    /* Reduce padding for streamlined look */
     background-color: #2660A4;
-    /* Add background to links */
     border-radius: 5px;
-    /* Round the corners */
     color: #FFFFFF;
-    /* Ensure link text is readable */
     text-align: center;
-    /* Center align link text */
 }
 
 #footer_links a:hover {
     background-color: #1e4a7a;
-    /* Change background on hover */
 }
