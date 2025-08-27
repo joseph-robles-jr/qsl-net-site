@@ -7,7 +7,8 @@
     --text-color: #000000;
     --background-color: #C9D8E9;
     --font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    --header-bg-color: #FFFFFF; /* White header background */
+    --header-bg-color: #FFFFFF;
+    /* White header background */
     --header-height: 60px;
     --footer-height: auto;
 }
@@ -21,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+
 }
 
 p {
@@ -81,98 +82,14 @@ nav a:hover {
 
 
 
-/* Mobile Theme (Less than 700px width) */
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
-
-    #logo {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-        gap: 5px;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .article {
-        padding: 20px;
-        max-width: 600px;
-        margin: 20px auto;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        color: var(--text-color);
-        flex: 1;
-    }
-
-    #RepeaterStats {
-        white-space: pre-wrap;
-        display: block;
-        
-        font-weight: normal;
-        text-decoration: none;
-        margin-top: 10px;
-        padding: 5px 10px;
-        background-color: var(--secondary-color);
-        color: var(--header-bg-color);
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
-
-    #RepeaterStats:hover {
-        color: var(--primary-color);
-        background-color: var(--background-color);
-    }
-}
-
-/* Desktop/Tablet theme  (Greater than 700 pixel width) */
-@media (min-width: 701px) {
-
-    .article {
-        padding: 20px;
-        max-width: 900px;
-        margin: 20px auto;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        color: var(--text-color);
-        flex: 1;
-    }
-
-    #RepeaterStats {
-        font-weight: normal;
-        text-decoration: none;
-        padding: 5px 10px;
-        background-color: var(--secondary-color);
-        color: var(--header-bg-color);
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
-
-    #RepeaterStats:hover { 
-        color: var(--primary-color);
-        background-color: var(--background-color);
-    }
-}
-
+/* Used on the allstarStatus page*/
 #allstarBubbleMap {
     border: 0.1em solid #000000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-
+/* Article Body */
 #content {
     flex: 1;
     margin-bottom: 20px;
@@ -237,4 +154,90 @@ footer p {
 
 #footer_links a:hover {
     background-color: #1e4a7a;
+}
+
+
+/* Mobile Theme (Less than 700px width) */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #logo {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .article {
+        padding: 20px;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: var(--text-color);
+        flex: 1;
+    }
+
+    #RepeaterStats {
+        white-space: pre-wrap;
+        display: block;
+
+        font-weight: normal;
+        text-decoration: none;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: var(--secondary-color);
+        color: var(--header-bg-color);
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    #RepeaterStats:hover {
+        color: var(--primary-color);
+        background-color: var(--background-color);
+    }
+}
+
+/* Desktop/Tablet theme  (Greater than 700 pixel width) */
+@media (min-width: 701px) {
+
+    .article {
+        padding: 20px;
+        max-width: 900px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: var(--text-color);
+        flex: 1;
+    }
+
+    #RepeaterStats {
+        font-weight: normal;
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: var(--secondary-color);
+        color: var(--header-bg-color);
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    #RepeaterStats:hover {
+        color: var(--primary-color);
+        background-color: var(--background-color);
+    }
 }
