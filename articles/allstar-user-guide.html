@@ -27,7 +27,7 @@
             <h2>How to use the KI5TLZ Allstar Repeater in Rexburg</h2>
             <h3 id="repeater_frequency"> 447.500 MHz, -5 MHz offset, 100.0 Hz CTCSS Tone</h3>
             <div id="repeater_welcome">
-                <p>If you are near the Rexburg Idaho area, please feel free to use my repeater. BYU Idaho students have priority use. The repeater is typicaly connected into the <a href=https://www.qsl.net/w7fed>T.R.A.S.H. RADIO GROUP</a> repeater system.</p>
+                <p>If you are near the Rexburg Idaho area, please feel free to use my repeater. BYU Idaho students have priority use.</p>
                 <p>For more information about the construction of the node, please refer to my short <a href="allstar.html">AllstarLink Node Construction write-up</a>.</p>
             </div>
             <h3>Current Connections</h3>
@@ -43,11 +43,10 @@
             <div id="FIRST_SECTION">
                 <h3>Basic commands</h3>                <ul>
                     <li>*70 -- To check the status of the node (See if the node is connected to other nodes)</li>
-                    <li>*10 -- Disconnects the last connected node</li>
-                    <li>*806 -- Disconnects ALL connected nodes. Do this before connecting a new node.</li>
+                    <!-- <li>*10 -- Disconnects the last connected node</li> -->
+                    <li>*806 -- Disconnects connected nodes. Do this before connecting a new node.</li>
                     <li>*1 [node number] -- Disconnects a specific node number</li>
                     <li>*3 [node number] -- Connects to a node number (DO NOT CONNECT TO A NODE WITHOUT DISCONNECTING FROM ALL OTHER CONNECTED NODES)</li>
-                    <li>*711 -- A good way to see if you are making it to the node. It will come back with a morse code burst.</li>
                 </ul>
             </div>
 
@@ -56,14 +55,13 @@
                 <p>Before you connect to the nodes bellow, Don't forget to disconnect from other nodes (*806).</p>
                 <p>To connect to BYU Provo, you would hold your PTT button and then type " *3536263 ". When you let go of the PTT, you should hear a beep and then a voice that says "Node 536263 Connected!". </p>
                 <ul>
-                    <li>Node 55770 : <a href="https://www.qsl.net/w7fed/">T.R.A.S.H Repeater system</a> (This is the Default Connection)</li>
+                    <li>Node 46079 : <a href="https://skyhublink.com/">Sky Hub Repeater System</a></li>
+                    <li>Node 55770 : <a href="https://www.qsl.net/w7fed/">T.R.A.S.H Repeater system</a></li>
                     <li>Node 27834 : <a href="https://www.hamradioelpaso.com/home">El Paso Texas Amigo Link Repeater System</a></li>
                     <li>Node 552150 : <a href="https://kb7dfp.com/Repeater.html">KB7DFP Repeater Twin Falls, Idaho</a></li>
                     <li>Node 276651 : <a href="http://stats.allstarlink.org/stats/276651">El Paso Texas WB5LJO 220 Repeater</a></li>
-                    <li>Node 48752 :  <a href="https://southcoastreflector.com/">South Coast Reflector</a> (Very Busy System - Please Disconnect When Finished)</li>           
+                    <li>Node 48752 :  <a href="https://southcoastreflector.com/">South Coast Reflector</a></li>           
                     <li>Node 2560 : <a href="https://www.winsystem.org/"> The WIN System</a></li>
-                    <li>Node 61117 : <a href="https://stats.allstarlink.org/stats/61117">KC8PRG Node West Virginia</a></li>
-                    <li>Node 41033 : <a href="https://www.qrz.com/db/KX3B">KX3B QRZ Page</a></li>
                     <li>Node 47057 : BYU Hawaii Repeater</li>
                     <li>Node 536263 : BYU Provo Repeater</li>
                     </ul>
@@ -84,12 +82,25 @@
                 <p>Many other allstar networks prohibit multiple connections from connected nodes. We could unintentionally connect 2 repeaters and be broadcasting a net from a small Alabama repeater out to the entire state of New Mexico (Yes, I speak from experience). The owners of the other nodes can BAN our node from connecting to theirs if we cause too much of a ruckus.</p>
                 <p><a href="http://stats.allstarlink.org/stats/60345">To check the status of the node</a>, click the picture at the top of the page. It should show the current connections in the node.</p>
             </div>
+            <div id="3RD-SECTION">
+                <h2>The Repeater</h2>
+                <img src="../images/allstarRepeater2025.jpg" alt="KI5TLZ Repeater as of December 2025">
+                <p>The KI5TLZ Repeater is hombrewed from the following parts: </p>
+                <ul>
+                    <li>Transmitter: Motorla CDM1550-ls+ 400mhz Tranciever</li>
+                    <li>Reciever: Motorola Radius M130 (GM300 Family)</li>
+                    <li>Controller: Raspberry Pi 4b running Allstarlink 3</li>
+                    <li>Audio Interface: <a href="https://www.masterscommunications.com/products/radio-adapter/ra25.html">Masters Communications RA-25</a></li>
+                    <li>Duplexer: Decibel Products Transceiver Duplexer</li>
+                    <li>Antenna: Homebrew 1/4 Wave Ground Plane Antenna</li>
+                </ul>
+            </div>
         </section>
     </section>
     <footer>
         <div id="contact_section">
             <h3>Contact me</h3>
-            <p>Email: <a href="mailto:KI5ZTLZ.TX@gmail.com">KI5ZTLZ.TX@gmail.com</a></p>
+            <p>Email: <a href="mailto:KI5TLZ.TX@gmail.com">KI5ZTLZ.TX@gmail.com</a></p>
             <p>My QRZ page: <a href="https://www.qrz.com/db/KI5TLZ" target="_blank">https://www.qrz.com/db/KI5TLZ</a></p>
         </div>
         <div id="footer_links">
