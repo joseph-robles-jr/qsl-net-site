@@ -1,7 +1,7 @@
-import { allstarNodeMap } from "./allstarNodeMap.js";
+import { allstarNodeMap } from "../jsModules/allstarNodeMap/allstarNodeMap.js";
 
 async function main(){
-    await allstarNodeMap();
+    await allstarNodeMap(603450, "nodeConnectionMap"); 
 }
 
 main();

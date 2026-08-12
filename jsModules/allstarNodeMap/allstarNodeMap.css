@@ -1,0 +1,106 @@
+/* Used by the AllStar Node Map module */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --asn-primary-color: #2660a4;
+    --asn-secondary-color: #859db8;
+    --asn-text-color: #000000;
+    --asn-background-color: #f1f7fd;
+    --asn-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.asn-node-map,
+.asn-node-map *,
+.asn-node-map *::before,
+.asn-node-map *::after {
+    box-sizing: border-box;
+}
+
+.asn-node-map {
+    font-family: var(--asn-font-family);
+    color: var(--asn-text-color);
+    background-color: var(--asn-background-color);
+    border: 1px solid #b8c8db;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.asn-node-map h3 {
+    text-align: center;
+    color: var(--asn-primary-color);
+    margin-bottom: 1rem;
+}
+
+.asn-node-map a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.asn-node-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.asn-node {
+    background-color: #ffffff;
+    border: 1px solid #b8c8db;
+    border-radius: 12px;
+    padding: 1rem;
+
+    min-width: 250px;
+    max-width: 350px;
+
+    flex: 1 1 280px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.asn-node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.asn-node h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+
+    text-align: center;
+    color: var(--asn-primary-color);
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    border-bottom: 1px solid #d0dbe8;
+    padding-bottom: 0.5rem;
+}
+
+.asn-node ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.asn-node li {
+    font-family: Consolas, Monaco, monospace;
+    margin-bottom: 0.25rem;
+}
+
+.asn-connected-nodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.asn-connected-node {
+    background-color: #fff8ec;
+    border-left: 4px solid #f4a340;
+}
+
+.asn-head-node {
+    background: linear-gradient(135deg, #e9f7e9, #d7f0d7);
+    border: 2px solid #c0ebc0;
+}

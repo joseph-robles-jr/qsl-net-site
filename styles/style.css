@@ -82,91 +82,7 @@ nav a:hover {
 
 
 
-/* Used on the allstarStatus page*/
-#nodeConnectionMap {
-    background-color: #f1f7fd;
-    border-radius: 12px;
-    padding: 1.5rem;
-    border: 1px solid #b8c8db;
-}
 
-
-#nodeConnectionMap h3 {
-    text-align: center;
-    color: var(--primary-color);
-
-    margin-bottom: 1rem;
-
-}
-
-
-.node {
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid #b8c8db;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
-    min-width: 250px;
-    max-width: 350px;
-
-    flex: 1 1 280px;
-    max-width: 350px;
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-#nodeConnectionMap a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-.nodeLink {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.node:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.node li {
-    font-family: Consolas, Monaco, monospace;
-}
-
-
-
-.node h4 {
-    margin-top: 0;
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-bottom: 1px solid #d0dbe8;
-    padding-bottom: 0.5rem;
-}
-
-#connectedNodes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.connectedNode {
-    background-color: #fff8ec;
-
-    border-left: 4px solid #f4a340;
-
-}
-
-
-#headNode {
-    background: linear-gradient(3 135deg, #e9f7e9, #d7f0d7 6);
-    border: 2px solid #4caf50;
-
-}
 
 
 /* Article Body */
@@ -329,8 +245,4 @@ footer p {
         max-width: 80%;
     }
 
-    .node {
-        min-width: 220px;
-        max-width: 280px;
-    }
 }
