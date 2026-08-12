@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allstar User Guide | KI5TLZ's Corner</title>
+    <script src='allstar-user-gude.js' defer></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="icon" href="data:,">
     
@@ -31,14 +32,9 @@
                 <p>For more information about the construction of the node, please refer to my short <a href="allstar.html">AllstarLink Node Construction write-up</a>.</p>
             </div>
             <h3>Current Connections</h3>
-            <a href="https://stats.allstarlink.org/stats/603450">
-                <img id="allstarBubbleMap" src="https://stats.allstarlink.org/stats/603450/networkMap" alt="Node Bubble Chart">
-            </a>
+            <div id="nodeConnectionMap">
 
-            <script> //this updates the image on page refresh by preventing the browser from caching the image. 
-                const allstarBubbleimg = document.getElementById("allstarBubbleMap"); // select the allstar bubble chart
-                allstarBubbleimg.src += "?date=" + new Date();
-            </script>
+            </div>
             
             <div id="FIRST_SECTION">
                 <h3>Basic commands</h3>                <ul>
