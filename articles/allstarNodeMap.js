@@ -109,7 +109,7 @@ function buildConnectedNodes(connectedNodes) {
     return builtNodes;
 }
 
-async function main() {
+export async function allstarNodeMap() {
 
     try {
         const output = await getAllstarStatus(APIURL);
@@ -132,7 +132,3 @@ async function main() {
         }
     }
 }
-
-
-main();
-
