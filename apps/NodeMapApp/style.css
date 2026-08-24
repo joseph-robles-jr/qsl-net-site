@@ -1,18 +1,19 @@
 /* ===== Theme ===== */
 :root {
-  --primary-color: #266;
-  --secondary-color: #859db8;
-  --text-color: #333;
-  --bg-color: #f9f9fb;
-  --card-bg: #fff;
+    --primary-color: #2660A4;
+    --secondary-color: #859db8;
+    --text-color: #000000;
 
-  --border-radius: 12px;
-  --input-radius: 8px;
+    --bg-color: #C9D8E9;
+    --card-bg: #FFFFFF;
 
-  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --input-radius: 8px;
 
-  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ===== Reset ===== */

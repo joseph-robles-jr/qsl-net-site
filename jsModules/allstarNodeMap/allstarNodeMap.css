@@ -1,14 +1,39 @@
-/* Used by the AllStar Node Map module */
+/* ==========================================
+   AllStar Node Map Module
+   ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
+/* ==========================================
+   Theme Variables
+   ========================================== */
+
 :root {
-    --asn-primary-color: #2660a4;
-    --asn-secondary-color: #859db8;
-    --asn-text-color: #000000;
-    --asn-background-color: #f1f7fd;
+    --asn-primary-color: #2660A4;
+    --asn-secondary-color: #859DB8;
+    --asn-text-color: #000;
+    --asn-background-color: #FFF;
+
+    --asn-border-color: #B8C8DB;
+    --asn-header-border-color: #D0DBE8;
+
+    --asn-connected-bg: #FFF8EC;
+    --asn-connected-border: #F4A340;
+
+    --asn-head-bg-start: #E9F7E9;
+    --asn-head-bg-end: #D7F0D7;
+    --asn-head-border: #C0EBC0;
+
     --asn-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+
+    --asn-border-radius: 12px;
+    --asn-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --asn-card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* ==========================================
+   Reset
+   ========================================== */
 
 .asn-node-map,
 .asn-node-map *,
@@ -17,65 +42,81 @@
     box-sizing: border-box;
 }
 
+/* ==========================================
+   Root Container
+   ========================================== */
+
 .asn-node-map {
+    padding: 1.5rem;
+
     font-family: var(--asn-font-family);
     color: var(--asn-text-color);
     background-color: var(--asn-background-color);
-    border: 1px solid #b8c8db;
-    border-radius: 12px;
-    padding: 1.5rem;
+
+    border: 1px solid var(--asn-border-color);
+    border-radius: var(--asn-border-radius);
 }
 
 .asn-node-map h3 {
+    margin-bottom: 1rem;
+
     text-align: center;
     color: var(--asn-primary-color);
-    margin-bottom: 1rem;
 }
 
-.asn-node-map a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
+/* ==========================================
+   Links
+   ========================================== */
 
+.asn-node-map a,
 .asn-node-link {
     display: block;
-    text-decoration: none;
+
     color: inherit;
+    text-decoration: none;
 }
 
+/* ==========================================
+   Node Cards
+   ========================================== */
+
 .asn-node {
-    background-color: #ffffff;
-    border: 1px solid #b8c8db;
-    border-radius: 12px;
-    padding: 1rem;
+    flex: 1 1 280px;
 
     min-width: 250px;
     max-width: 350px;
 
-    flex: 1 1 280px;
+    padding: 1rem;
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #FFF;
+
+    border: 1px solid var(--asn-border-color);
+    border-radius: var(--asn-border-radius);
+
+    box-shadow: var(--asn-card-shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .asn-node:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--asn-card-shadow-hover);
 }
 
 .asn-node h4 {
     margin-top: 0;
     margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
 
     text-align: center;
+
     color: var(--asn-primary-color);
-
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
 
-    border-bottom: 1px solid #d0dbe8;
-    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--asn-header-border-color);
 }
 
 .asn-node ul {
@@ -84,9 +125,14 @@
 }
 
 .asn-node li {
-    font-family: Consolas, Monaco, monospace;
     margin-bottom: 0.25rem;
+
+    font-family: Consolas, Monaco, monospace;
 }
+
+/* ==========================================
+   Node Layout
+   ========================================== */
 
 .asn-connected-nodes {
     display: flex;
@@ -95,12 +141,25 @@
     gap: 1rem;
 }
 
+/* ==========================================
+   Connected Nodes
+   ========================================== */
+
 .asn-connected-node {
-    background-color: #fff8ec;
-    border-left: 4px solid #f4a340;
+    background-color: var(--asn-connected-bg);
+    border-left: 4px solid var(--asn-connected-border);
 }
 
+/* ==========================================
+   Head Node
+   ========================================== */
+
 .asn-head-node {
-    background: linear-gradient(135deg, #e9f7e9, #d7f0d7);
-    border: 2px solid #c0ebc0;
+    background: linear-gradient(
+        135deg,
+        var(--asn-head-bg-start),
+        var(--asn-head-bg-end)
+    );
+
+    border: 2px solid var(--asn-head-border);
 }
