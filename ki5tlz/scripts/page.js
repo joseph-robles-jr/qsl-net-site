@@ -6,17 +6,17 @@ const CONTACT = {
 };
 
 const navLinks = [
-    { text: 'Home', href: '/index.html' },
-    { text: 'Repeater', href: '/articles/allstar-user-guide.html' },
-    { text: 'Node History', href: '/articles/history.html' },
-    { text: 'Allstar Map', href: '/apps/NodeMapApp/NodeMapApp.html' }
+    { text: 'Home', href: '/ki5tlz/index.html' },
+    { text: 'Repeater', href: '/ki5tlz/articles/allstar-user-guide.html' },
+    { text: 'Node History', href: '/ki5tlz/articles/history.html' },
+    { text: 'Allstar Map', href: '/ki5tlz/apps/NodeMapApp/NodeMapApp.html' }
     //{ text: 'Test123', href: 'https://google.com'}
 ];
 
 const footerLinks = [
-    { text: 'Home', href: '/index.html' },
-    { text: 'Repeater', href: '/articles/allstar-user-guide.html' },
-    { text: 'Page Index', href: '/articles/table-of-contents.html' }
+    { text: 'Home', href: '/ki5tlz/index.html' },
+    { text: 'Repeater', href: '/ki5tlz/articles/allstar-user-guide.html' },
+    { text: 'Page Index', href: '/ki5tlz/articles/table-of-contents.html' }
 ];
 
 
@@ -30,8 +30,8 @@ function renderHeader() {
 
     header.innerHTML = `
         <div class="site-header">
-            <a href="/index.html" class="logo-link">
-                <img id="logo" src="/images/joseph_logo.jpg" alt="KI5TLZ Logo">
+            <a href="/ki5tlz/index.html" class="logo-link">
+                <img id="logo" src="/ki5tlz/images/joseph_logo.jpg" alt="KI5TLZ Logo">
             </a>
 
             <button

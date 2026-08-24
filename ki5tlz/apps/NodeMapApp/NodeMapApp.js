@@ -1,4 +1,4 @@
-import {allstarNodeMap} from "/jsModules/allstarNodeMap/allstarNodeMap.js"
+import {allstarNodeMap} from "/ki5tlz/jsModules/allstarNodeMap/allstarNodeMap.js"
 
 const DEFAULT_NODE_NUMBER = 603450;
 
