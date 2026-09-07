@@ -57,9 +57,6 @@ function renderFooter() {
     const footer = document.querySelector('footer');
     if (!footer) return;
 
-    const footerLinksHtml = footerLinks
-        .map(link => `<a href="${link.href}">${link.text}</a>`)
-        .join('');
 
     footer.innerHTML = `
         <div id="contact_section">
@@ -78,9 +75,6 @@ function renderFooter() {
             </p>
         </div>
 
-        <div id="footer_links">
-            ${footerLinksHtml}
-        </div>
     `;
 }
 
