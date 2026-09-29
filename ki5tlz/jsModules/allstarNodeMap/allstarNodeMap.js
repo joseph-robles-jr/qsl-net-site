@@ -123,6 +123,7 @@ function buildHeadNodePayload(headNode) {
                             <li>Location: ${headNode.location}</li>
                             </ul>
                             <div class=asn-card-button-container>
+                                <a target="_blank" href=https://stats.allstarlink.org/stats/${HEADNODE}/networkMap><button class=asn-small-button>Full Map (External)</button></a>
                                 <a href=https://stats.allstarlink.org/stats/${HEADNODE}><button class=asn-small-button>More Info</button></a>
                             </div>
 
