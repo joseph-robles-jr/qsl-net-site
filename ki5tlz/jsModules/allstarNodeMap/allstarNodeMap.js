@@ -3,10 +3,10 @@
 
 
 
-let HEADNODE; 
+let HEADNODE;
 let APIURL;
 
-/*This section links the nodes stylesheet to the module ---*/ 
+/*This section links the nodes stylesheet to the module ---*/
 const cssId = 'allstar-node-map-css';
 const cssUrl = new URL('./allstarNodeMap.css', import.meta.url);
 
@@ -23,11 +23,23 @@ if (!document.getElementById(cssId)) {
 
 
 
+// async function getAllstarStatus(url) {
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//         throw new Error(`HTTP Error: ${response.status}`);
+//     }
+//     return response.json();
+// }
+
 async function getAllstarStatus(url) {
     const response = await fetch(url);
+
     if (!response.ok) {
-        throw new Error(`HTTP Error: ${response.status}`);
+        const error = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        error.status = response.status;
+        throw error;
     }
+
     return response.json();
 }
 
@@ -103,14 +115,18 @@ function writeNodesPayload(payload, elementIdToContainNodeMap) {
 
 function buildHeadNodePayload(headNode) {
     //Build the HTML for Head Node
-    return `<a id='headNode' class="asn-node asn-head-node asn-node-link" href=https://stats.allstarlink.org/stats/${HEADNODE}>
+    return `<div id='headNode' class="asn-node asn-head-node" >
                         <h4>${headNode.callsign}</h4>
                         <ul>
                             <li>Node Number: ${headNode.nodeNumber}</li>
                             <li>Site Name: ${headNode.siteName || "Unknown"}</li>
                             <li>Location: ${headNode.location}</li>
-                        </ul>
-                        </a>\n`
+                            </ul>
+                            <div class=asn-card-button-container>
+                                <a href=https://stats.allstarlink.org/stats/${HEADNODE}><button class=asn-small-button>More Info</button></a>
+                            </div>
+
+                        </div>\n`
 
 }
 
@@ -119,14 +135,19 @@ function buildConnectedNodes(connectedNodes) {
     let builtNodes = `<div class="asn-connected-nodes">`;
     connectedNodes.forEach(element => {
         builtNodes +=
-            `<a class="asn-node asn-connected-node asn-node-link" href=https://stats.allstarlink.org/stats/${element.nodeNumber}>            
+            `<div class="asn-node asn-connected-node">         
             <h4>${element.callsign}</h4>
                         <ul>
                             <li>Node Number: ${element.nodeNumber}</li>
                             <li>Site Name: ${element.siteName || "Unknown"}</li>
                             <li>Location: ${element.location}</li>
-                        </ul>
-                        </a> \n`
+                            </ul>
+                            <div class=asn-card-button-container>
+                                <a href=/ki5tlz/apps/NodeMapApp/NodeMapApp.html?nodeNumber=${element.nodeNumber}> <button class=asn-small-button >Focus Node</button></a>
+                                <a href=https://stats.allstarlink.org/stats/${element.nodeNumber}> <button class=asn-small-button >More Info</button></a>
+                            </div>
+
+                        </div> \n`
     });
     if (connectedNodes.length === 0) {
 
@@ -140,11 +161,22 @@ function buildConnectedNodes(connectedNodes) {
     return builtNodes;
 }
 
+function buildErrorPayload(error) {
+    const htmlToWrite = `<div class="asn-node-map">
+        <h3>ERROR: </h3>
+            <div class="asn-error">
+                    Unable to find node. Please try again.
+            </div> 
+        </div>`;
+    return htmlToWrite;
+
+}
+
 export async function allstarNodeMap(nodeNumber, idOfElementThatWillContanNodeMap) {
     HEADNODE = nodeNumber;
     APIURL = `https://stats.allstarlink.org/api/stats/${HEADNODE}?${Date.now()}`
     try {
-        
+
         const output = await getAllstarStatus(APIURL);
 
         const headNode = parseHeadNode(output);
@@ -152,18 +184,40 @@ export async function allstarNodeMap(nodeNumber, idOfElementThatWillContanNodeMa
 
         //await printNode(headNode);
         //connectedNodes.forEach(printNode);
-        
+
         let htmlPayload = buildNodesPayload(headNode, connectedNodes);
 
         writeNodesPayload(htmlPayload, idOfElementThatWillContanNodeMap);
     }
 
+
     catch (error) {
         console.error(error);
-        const nodeMapElement = document.getElementById("nodeConnectionMap");
 
-        if (nodeMapElement) {
-            nodeMapElement.textContent = "Unable to retrieve node information.";
+        const container =
+            document.getElementById(idOfElementThatWillContanNodeMap) ||
+            document.getElementById("nodeConnectionMap");
+
+        if (!container) {
+            return;
         }
+
+        if (error.status === 404) {
+            container.innerHTML = `
+<div class="asn-node-map">
+            <div class="asn-warn">
+                    Unable to find node number. Please try a different node number.
+            </div> 
+        </div>`;
+        } else {
+            container.innerHTML = `
+ <div class="asn-node-map">
+        <h3>ERROR: </h3>
+            <div class="asn-error">
+                    Unable to find node. Please try again.
+            </div> 
+        </div>`;
     }
+}
+
 }

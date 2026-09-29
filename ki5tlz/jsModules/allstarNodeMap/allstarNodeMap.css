@@ -14,6 +14,9 @@
     --asn-text-color: #000;
     --asn-background-color: #FFF;
 
+    --asn-unvisited-links: ##0000EE;
+    --asn-visited-links: #551A8B;
+
     --asn-border-color: #B8C8DB;
     --asn-header-border-color: #D0DBE8;
 
@@ -72,10 +75,37 @@
 .asn-node-link {
     display: block;
 
-    color: inherit;
-    text-decoration: none;
+    color: var(--asn-unvisited-links);
+    /* text-decoration: none; */
 }
 
+.asn-node-link:hover {
+    color: var(--asn-visited-links);
+}
+
+/* ==========================================
+   ERRORS 
+   ========================================== */
+.asn-error{
+    font-family: var(--asn-font-family);
+    color: red;
+    text-align: center;
+    font-weight: strong;
+    font-size: x-large;
+    
+}
+
+.asn-warn {
+    font-family: var(--asn-font-family);
+    color: var(--asn-primary-color);
+    text-align: center;
+    font-weight: strong;
+    font-size: medium;
+    
+}
+
+
+   
 /* ==========================================
    Node Cards
    ========================================== */
@@ -128,6 +158,34 @@
     margin-bottom: 0.25rem;
 
     font-family: Consolas, Monaco, monospace;
+}
+.asn-card-button-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+/* ===== Buttons ===== */
+.asn-small-button {
+  padding: 5px 5px;
+  margin-inline: 3px;
+  min-height: 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--asn-primary-color);
+  color: white;
+
+  font-size: .75rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.asn-small-button:hover {
+  background: #15376c;
 }
 
 /* ==========================================

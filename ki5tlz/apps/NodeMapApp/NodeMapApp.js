@@ -2,6 +2,9 @@ import {allstarNodeMap} from "/ki5tlz/jsModules/allstarNodeMap/allstarNodeMap.js
 
 const DEFAULT_NODE_NUMBER = 603450;
 
+const nodeNumberParamValue = new URLSearchParams(window.location.search).get('nodeNumber');
+
+
 // nodeForm/submit
 document.querySelector('form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -14,7 +17,13 @@ const refreshButton = document.getElementById('resetMapButton')
 refreshButton.addEventListener('click', drawDefaultMap);
 
 async function buildMap(nodeNumber){
-    allstarNodeMap(nodeNumber, 'MapContainer');
+    try{
+        await allstarNodeMap(nodeNumber, 'MapContainer');
+    }
+    catch (error){
+        document.getElementById('MapContainer').innerHTML =
+        '<p>Unable to find node. Please try again.</p>';
+    }
 }
 
 function drawDefaultMap(){
@@ -23,7 +32,13 @@ function drawDefaultMap(){
 }
 
 function main(){
-    drawDefaultMap();
+
+    if (nodeNumberParamValue != null){
+        buildMap(nodeNumberParamValue);
+    }
+    else{
+        drawDefaultMap();
+    }
 }
 
 
