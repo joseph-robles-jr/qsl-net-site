@@ -144,7 +144,7 @@ function buildConnectedNodes(connectedNodes) {
                             <li>Location: ${element.location}</li>
                             </ul>
                             <div class=asn-card-button-container>
-                                <a href=/ki5tlz/apps/NodeMapApp/NodeMapApp.html?nodeNumber=${element.nodeNumber}> <button class=asn-small-button >Focus Node</button></a>
+                                <a href=/apps/NodeMapApp/NodeMapApp.html?nodeNumber=${element.nodeNumber}> <button class=asn-small-button >Focus Node</button></a>
                                 <a href=https://stats.allstarlink.org/stats/${element.nodeNumber}> <button class=asn-small-button >More Info</button></a>
                             </div>
 
